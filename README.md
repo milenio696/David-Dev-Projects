@@ -27,15 +27,10 @@ Each project has its own folder with a detailed README.
 **Description:** Android app for managing student records, courses, grades, and secure payments.  
 **Technologies:** Kotlin, Android Studio, Firebase, Google Authentication API  
 
-### 5. Data Driven Retail DataBase
-**Language:** SQL (T-SQL)  
-**Description:** Database creation, normalization, and query examples for a video game sales system.  
-**Technologies:** SQL Server  
-
-### 6. Corporate System Enhancement
-**Language:** SQL (T-SQL)  
-**Description:** Comprehensive database structure for managing company assets, employees, roles, logins, and maintenance workflows. Designed to improve and optimize the operational processes of an existing company through normalized database design, stored procedures, views, and triggers.  
-**Technologies:** SQL Server, T-SQL, Database Normalization, Stored Procedures, Views, Triggers, Security Roles, Access Control
+### 5. Database Management Projects
+**Language:** SQL (T-SQL)
+**Description:** A collection of database projects demonstrating design, normalization, transactional procedures, triggers, and data integrity. Projects focus on practical business applications like company operations, rental systems, financial transactions, and retail management and automation.
+**Technologies:** SQL Server, T-SQL, Stored Procedures, Triggers, Views, Functions, Security Roles
 
 ---
 
