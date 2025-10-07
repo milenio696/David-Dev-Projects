@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %} Procesar Empleado {% endblock %}
+
+{% block content %}
+
+<h1>Procesar pago</h1>
+<p>En esta sección se puede revisar la información del usuario y marcar los rebajos correspondientes. Esto con el fin de procesar la factura.</p>
+
+<form action="/procesarPago" method= "POST">
+
+    <h3>Informacion del Empleado</h3>
+    <!-- Muestro la información extraída de la selección -->
+    <label for="nombre">Nombre Completo: </label>
+    <input type="text" id="nombre" name="nombre" value="{{ almacen[0] + ' ' + almacen[1] }}" required readonly>
+
+    <label for="correo">Correo Electrónico: </label>
+    <input type="email" id="correo" name="correo" value="{{ almacen[2] }}" required readonly>
+
+    <label for="salario">Salario Bruto: </label>
+    <input type="number" id="salario" name="salario" value="{{ almacen[3] }}" readonly>
+
+    <label for="fecha">Fecha Seleccionada: </label>
+    <input type="text" id="fecha" name="fecha" value="{{ fecha }}" readonly>
+
+    <h3>Ajustes Salariales</h3>
+    <!-- Agrego las opciones para revisar aplicar el salario neto -->
+    <label for="extrahours">Horas Extras: </label>
+    <input type="number" id="extrahours" name="extrahours" step="1.00" required>
+
+    <label for="Bonos">Bonos (Ingresar en colones): </label>
+    <input type="number" id="Bonos" name="Bonos" step="1.00" required>
+
+    <label for="ccss">Seguro Medico CCSS</label>
+    <input type="checkbox" id="ccss" name="ccss" value="True" checked>
+    
+    <label for="pension">Pensión Alimenticia</label>
+    <input type="checkbox" id="pension" name="pension" value="True">
+
+    <label for="Asociacion">Asociación Solidarista</label>
+    <input type="checkbox" id="Asociacion" name="Asociacion" value="True">
+
+    <label for="renta">Impuesto de Renta</label>
+    <input type="checkbox" id="renta" name="renta" value="True" checked>
+
+    <button type="submit">Confirmar y enviar información</button>
+
+</form>
+
+{% endblock %}

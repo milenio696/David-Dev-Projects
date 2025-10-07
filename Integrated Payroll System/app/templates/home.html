@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %} HOME {% endblock %}
+
+
+    {% block content %} 
+
+    <h1>Transacciones Laborales D&J</h1> 
+    <p>¡Gracias por confiar en nosotros! Esta pagina esta diseñada para poder realizar los pagos correspondientes a los trabajadores afiliados de la entidad.</p>
+
+
+     <!-- Input para seleccionar la fecha -->
+    <h3>Para iniciar, por favor seleccione la fecha del pago a realizar</h3>
+   
+    <script>
+        function validarFecha() {
+            var fecha = document.getElementById('Fecha').value;
+            if (!fecha) {
+                alert('No se ha seleccionado la fecha de pago. Por favor inténtelo de nuevo.');
+                return false; // Evita que el formulario se envíe
+            }
+            return true; // Permite el envío del formulario si hay una fecha
+        }
+    </script>
+
+
+    <form action="{{ url_for('getEmpleado') }}" method="POST" onsubmit= "return validarFecha();">
+        <label for="Fecha">Fecha Deseada: </label>
+        <input type="date" id="Fecha" name="Fecha">
+        
+
+
+    <!-- Select para el empleado deseado -->
+    <h1>Employee List</h1>
+    <h3>Seleccione el empleado al que desea hacerle el pago</h3>
+
+        <label for="Empleado">Seleccione un Empleado:</label> 
+        <select name="Empleado" id="Empleado">
+            
+            {% for id, nombre_empleado in empleados.items() %}
+
+                <!--En estos casos, el  VALUE es lo que se envia-->
+                <option value="{{ id }}"> {{ nombre_empleado }} </option>
+
+            {% endfor %}
+
+        </select>
+        <button type="submit">Seleccionar</button>
+    </form>
+
+    {% endblock %}

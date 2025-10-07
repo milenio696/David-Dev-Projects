@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de usuario</title>
+</head>
+
+<body>
+    
+
+    <h1>Ingrese el nombre de usuario</h1> <!-- Pongo un titulo -->
+    <p>{{result}}</p>
+
+    <!--Abro formulario-->
+    <form action="/enviarLogin" method = "POST"> <!--Abro un formulario que me POSTEE la info a la ruta /submit-->
+        <label for="name">Nombre</label> <!--Creo una etiqueta-->
+        <input type="text" id= "name" name="name"> <!--Ingreso un input de tipo text--> 
+
+        <label for="pwd">Contraseña</label>
+        <input type="password" id="pwd" name="pwd">
+        
+        <button type="submit">Enviar</button> <!--Agrego el boton que va a enviar la info-->
+    </form>
+
+    <!--Pie de pagina-->    
+    <footer> 
+        <p>&copy; Programacion 3 - Universidad Latina - 2024</p> <!--Agregar un parrafo-->
+    </footer>
+
+    
+</body>
+</html>
