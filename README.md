@@ -27,6 +27,11 @@ Each project has its own folder with a detailed README.
 **Description:** Android app for managing student records, courses, grades, and secure payments.  
 **Technologies:** Kotlin, Android Studio, Firebase, Google Authentication API  
 
+### 5. Data Driven Retail DataBase
+**Language:** SQL (T-SQL)  
+**Description:** Database creation, normalization, and query examples for a video game sales system.  
+**Technologies:** SQL Server  
+
 ---
 
 ## Note
