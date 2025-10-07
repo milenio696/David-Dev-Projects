@@ -7,29 +7,29 @@ Each project has its own folder with a detailed README.
 
 ## Projects
 
-### 1. Financial Analysis Tool
+### 1. Expense Tracking System
 **Language:** Java  
 **Description:** Calculates annual expenses and monthly profits with clear summaries.  
 **Technologies:** Java (JDK 8+)  
-**[Más detalles](FinancialAnalysisTool/README.md#financial-analysis-tool)**
+**[Más detalles](Expense Tracking System/README.md)**
 
-### 2. Enterprise Payroll Engine
+### 2. Integrated Payroll System
 **Language:** Python + Flask  
 **Description:** Web-based payroll system with salary calculation, PDF generation, and email automation.  
 **Technologies:** Python, Flask, SQLAlchemy, Flask-Mail, ReportLab  
-**[Más detalles](EnterprisePayrollEngine/README.md#enterprise-payroll-engine)**
+**[Más detalles](Integrated Payroll System/README.md)**
 
-### 3. Competitive Scoring Engine
+### 3. Interactive Game Progress Engine
 **Language:** C#, HTML, CSS, Java  
 **Description:** Interactive web application for team competitions with scoring and progress tracking.  
 **Technologies:** C#, HTML, CSS, ASP.NET  
-**[Más detalles](CompetitiveScoringEngine/README.md#competitive-scoring-engine)**
+**[Más detalles](Interactive Game Progress Engine/README.md)**
 
 ### 4. Academic Records Manager
 **Language:** Kotlin (Android)  
 **Description:** Android app for managing student records, courses, grades, and secure payments.  
 **Technologies:** Kotlin, Android Studio, Firebase, Google Authentication API
-**[Más detalles](AcademicRecordsManager/README.md#academic-records-manager)**
+**[Más detalles](Academic Records Manager/README.md)**
 ---
 
 ## Note
