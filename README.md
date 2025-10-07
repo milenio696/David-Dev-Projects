@@ -31,6 +31,7 @@ Each project has its own folder with a detailed README.
 **Language:** SQL (T-SQL)  
 **Description:** A collection of database projects demonstrating design, normalization, transactional procedures, triggers, and data integrity. Projects focus on practical business applications like company operations, rental systems, financial transactions, and retail management and automation.  
 **Technologies:** SQL Server, T-SQL, Stored Procedures, Triggers, Views, Functions, Security Roles  
+[More Details](./Database%20Management/README.md)
 
 ---
 
