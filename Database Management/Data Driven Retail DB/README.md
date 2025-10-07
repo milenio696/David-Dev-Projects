@@ -1,4 +1,4 @@
-# Game Sales Database
+# Data Driven Retail DB
 
 This SQL project demonstrates database design, normalization, and query handling for a video game sales system.
 
