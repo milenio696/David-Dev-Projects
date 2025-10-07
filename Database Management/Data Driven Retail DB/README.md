@@ -28,3 +28,9 @@ It showcases both **non-normalized** and **normalized** structures, along with e
 
 ## Purpose
 This script was developed to demonstrate database handling, normalization, and advanced SQL querying.
+
+---
+
+## Note
+
+© 2025 David Abarca. For portfolio purposes only. Viewing is allowed; reproduction or modification is not permitted.

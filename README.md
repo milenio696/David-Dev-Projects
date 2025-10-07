@@ -32,6 +32,11 @@ Each project has its own folder with a detailed README.
 **Description:** Database creation, normalization, and query examples for a video game sales system.  
 **Technologies:** SQL Server  
 
+### 6. Corporate System Enhancement
+**Language:** SQL (T-SQL)  
+**Description:** Comprehensive database structure for managing company assets, employees, roles, logins, and maintenance workflows. Designed to improve and optimize the operational processes of an existing company through normalized database design, stored procedures, views, and triggers.  
+**Technologies:** SQL Server, T-SQL, Database Normalization, Stored Procedures, Views, Triggers, Security Roles, Access Control
+
 ---
 
 ## Note
