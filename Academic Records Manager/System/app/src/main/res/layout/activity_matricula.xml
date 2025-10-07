@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#0D0D0D"
+    tools:context=".MatriculaActivity">
+
+    <ImageView
+        android:id="@+id/img_tarjeta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="39dp"
+        android:src="@drawable/credit_card_on_png_background_600nw_2259495135"
+        app:layout_constraintBottom_toTopOf="@+id/txt_tarjeta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_RTtarjeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="194dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="193dp"
+        android:text="**** **** **** ****"
+        android:textColor="#D5CCCC"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_dueño"
+        app:layout_constraintEnd_toEndOf="@+id/txt_RTcvv"
+        app:layout_constraintStart_toStartOf="@+id/img_tarjeta"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_RTdueño"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="Nombre"
+        android:textColor="#D5CCCC"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/img_tarjeta"
+        app:layout_constraintEnd_toStartOf="@+id/txt_RTfecha"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtxt_curso"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="85dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_confirmar_compra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_expira" />
+
+    <EditText
+        android:id="@+id/edtxt_dueño"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_admin_tarjetas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:backgroundTint="#262626"
+        android:text="Ver Tarjetas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_confirmar_compra" />
+
+    <Button
+        android:id="@+id/btn_cancelar_compra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="192dp"
+        android:backgroundTint="#852E20"
+        android:text="Atras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_confirmar_compra"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_confirmar_compra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="77dp"
+        android:backgroundTint="#2EA66A"
+        android:text="Confirmar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_cancelar_compra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_curso" />
+
+    <TextView
+        android:id="@+id/txt_RTcvv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="92dp"
+        android:text="CVV"
+        android:textColor="#D5CCCC"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_RTfecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_RTfecha" />
+
+    <EditText
+        android:id="@+id/edtxt_tajeta"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="116dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="16"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_expira"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_RTcvv" />
+
+    <TextView
+        android:id="@+id/txt_tarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="Numero de Tarjeta"
+        android:textColor="#656F76"
+        app:layout_constraintBottom_toTopOf="@+id/edtxt_tajeta"
+        app:layout_constraintStart_toStartOf="@+id/edtxt_tajeta" />
+
+    <TextView
+        android:id="@+id/txt_expira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="Fecha de Expiracion"
+        android:textColor="#656F76"
+        app:layout_constraintStart_toStartOf="@+id/edtxt_dueño"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_dueño" />
+
+    <TextView
+        android:id="@+id/txt_cvv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CVV"
+        android:textColor="#656F76"
+        app:layout_constraintBottom_toTopOf="@+id/edtxt_cvv"
+        app:layout_constraintStart_toStartOf="@+id/edtxt_cvv" />
+
+    <EditText
+        android:id="@+id/edtxt_cvv"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="83dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/edtxt_curso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_expira"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dueño" />
+
+    <EditText
+        android:id="@+id/edtxt_fecha_expiracion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/edtxt_cvv"
+        app:layout_constraintEnd_toEndOf="@+id/txt_cvv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtxt_cvv" />
+
+    <TextView
+        android:id="@+id/txt_curso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="Cursos a Matricular"
+        android:textColor="#656F76"
+        app:layout_constraintBottom_toTopOf="@+id/edtxt_curso"
+        app:layout_constraintEnd_toEndOf="@+id/edtxt_curso"
+        app:layout_constraintStart_toStartOf="@+id/edtxt_curso" />
+
+    <TextView
+        android:id="@+id/txt_dueño"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="Nombre de Dueño"
+        android:textColor="#656F76"
+        app:layout_constraintBottom_toTopOf="@+id/edtxt_dueño"
+        app:layout_constraintStart_toStartOf="@+id/edtxt_dueño" />
+
+    <TextView
+        android:id="@+id/txt_RTfecha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="MM/AA"
+        android:textColor="#D5CCCC"
+        app:layout_constraintEnd_toStartOf="@+id/txt_RTcvv"
+        app:layout_constraintStart_toEndOf="@+id/txt_RTdueño"
+        app:layout_constraintTop_toBottomOf="@+id/txt_RTtarjeta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

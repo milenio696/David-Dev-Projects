@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7E5E5"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="428dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="1dp"
+        android:background="#90AFC5"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_relleno2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="88dp"
+            android:layout_height="78dp"
+            android:src="@drawable/_135768_photoroom" />
+
+        <TextView
+            android:id="@+id/txt_relleno"
+            android:layout_width="match_parent"
+            android:layout_height="29dp" />
+
+        <TextView
+            android:id="@+id/txt_bienvenida"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="viewStart"
+            android:textColor="#2C2F2F"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:autoSizeTextType="uniform" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_soporte_tecnico"
+        android:layout_width="313dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="57dp"
+        android:background="#181212"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_soporte_tecnico"
+        app:srcCompat="@drawable/technical" />
+
+    <TextView
+        android:id="@+id/txt_soporte_tecnico"
+        android:layout_width="147dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="132dp"
+        android:text="Soporte Técnico"
+        android:textSize="20sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_matricula" />
+
+    <TextView
+        android:id="@+id/txt_matricula"
+        android:layout_width="101dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="160dp"
+        android:text="Matriculas"
+        android:textSize="20sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_estudiantes" />
+
+    <ImageButton
+        android:id="@+id/btn_matricula"
+        android:layout_width="315dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="57dp"
+        android:background="#5B3F3F"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_matricula"
+        app:srcCompat="@drawable/matri" />
+
+    <ImageButton
+        android:id="@+id/btn_estudiantes"
+        android:layout_width="317dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="54dp"
+        android:background="#282828"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_estudiante"
+        app:srcCompat="@drawable/base_de_datos_min_e1523470739502" />
+
+    <TextView
+        android:id="@+id/txt_estudiante"
+        android:layout_width="107dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="153dp"
+        android:text="Estudiantes"
+        android:textSize="20sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

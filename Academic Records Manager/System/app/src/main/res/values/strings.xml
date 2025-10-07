@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Proyecto Programacion V</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="acceder">Acceder</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="atras"><![CDATA[< Atras]]></string>
+    <string name="crear_cuenta">Crear Cuenta</string>
+    <string name="confirmar_contrase_a">Confirmar Contraseña</string>
+</resources>

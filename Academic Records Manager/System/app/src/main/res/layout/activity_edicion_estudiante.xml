@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EdicionEstudianteActivity">
+
+
+    <TextView
+        android:id="@+id/txt_carr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="36dp"
+        android:text="Carrera:"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_ced"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_actualizar_edicion"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="104dp"
+        android:backgroundTint="#2EA66A"
+        android:text="Actualizar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_telefono_edicion" />
+
+    <Button
+        android:id="@+id/btn_eliminar_estudiante"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="104dp"
+        android:backgroundTint="#852E20"
+        android:text="Eliminar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_actualizar_edicion"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_telefono_edicion" />
+
+    <TextView
+        android:id="@+id/txt_gen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="34dp"
+        android:text="Genero:"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_carr"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="33dp"
+        android:text="Nombre:"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_apell"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_ced"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="38dp"
+        android:text="Cedula:"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_tel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="46dp"
+        android:text="Telefono:"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_actualizar_edicion"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_apell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="39dp"
+        android:text="Apellido:"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_gen"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_atras_edicion_estudiante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="315dp"
+        android:backgroundTint="#852E20"
+        android:text="Atras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="234dp"
+        android:layout_height="323dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_name"
+        app:layout_constraintEnd_toStartOf="@+id/edtxt_nombre_edicion"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toEndOf="@+id/txt_name"
+        app:layout_constraintTop_toBottomOf="@+id/btn_atras_edicion_estudiante"
+        app:srcCompat="@drawable/edicion" />
+
+    <EditText
+        android:id="@+id/edtxt_cedula_edicion"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="55dp"
+        android:ems="10"
+        android:hint="Ingese la cédula"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_carrera_edicion" />
+
+    <EditText
+        android:id="@+id/edtxt_genero_edicion"
+        android:layout_width="231dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="55dp"
+        android:ems="10"
+        android:hint="Seleccione el genero"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_apellido_edicion" />
+
+    <EditText
+        android:id="@+id/edtxt_nombre_edicion"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:hint="Ingrese el nombre"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/edtxt_apellido_edicion"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/edtxt_carrera_edicion"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="56dp"
+        android:ems="10"
+        android:hint="Seleccione la carrera"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_genero_edicion" />
+
+    <EditText
+        android:id="@+id/edtxt_telefono_edicion"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="53dp"
+        android:ems="10"
+        android:hint="Ingrese el teléfono"
+        android:inputType="phone"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_cedula_edicion" />
+
+    <EditText
+        android:id="@+id/edtxt_apellido_edicion"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="54dp"
+        android:ems="10"
+        android:hint="Ingrese el apellido"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_nombre_edicion" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

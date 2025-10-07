@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context=".TechSupportActivity">
+
+    <!-- EditText para el Asunto -->
+
+    <!-- EditText para el Mensaje -->
+
+    <!-- Botón para Enviar -->
+
+    <ImageView
+        android:id="@+id/img_soporte_tecnico"
+        android:layout_width="327dp"
+        android:layout_height="270dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="34dp"
+        android:src="@drawable/soporte_photoroom"
+        app:layout_constraintBottom_toTopOf="@+id/edtxt_asunto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtxt_asunto"
+        android:layout_width="427dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="48dp"
+        android:hint="Asunto"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_soporte_tecnico" />
+
+    <EditText
+        android:id="@+id/edtxt_mensaje"
+        android:layout_width="427dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="14dp"
+        android:hint="Escribe un mensaje"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_atras_technical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_asunto" />
+
+    <Button
+        android:id="@+id/btn_atras_technical"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="22dp"
+        android:backgroundTint="#611409"
+        android:text="Atras"
+        app:layout_constraintEnd_toStartOf="@+id/btn_enviar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_mensaje" />
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="80dp"
+        android:backgroundTint="#335890"
+        android:text="Crear Tiquete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_atras_technical"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_mensaje" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

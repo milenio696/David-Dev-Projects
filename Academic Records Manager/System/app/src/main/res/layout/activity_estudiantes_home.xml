@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8F2"
+    tools:context=".EstudiantesHomeActivity">
+
+    <Button
+        android:id="@+id/btn_crear_estudiante"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="41dp"
+        android:backgroundTint="#2EA66A"
+        android:text="Nuevo Estudiante"
+        app:layout_constraintStart_toEndOf="@+id/btn_atras_estudiantes"
+        app:layout_constraintTop_toBottomOf="@+id/scroll_view_estudiantes" />
+
+    <Button
+        android:id="@+id/btn_atras_estudiantes"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="#852E20"
+        android:text="Atrás"
+        android:textColorLink="#1F1A1A"
+        app:layout_constraintEnd_toStartOf="@+id/btn_crear_estudiante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll_view_estudiantes" />
+
+    <TextView
+        android:id="@+id/txt_bd_estudiantes"
+        android:layout_width="338dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="36dp"
+        android:text="Base de Datos de Estudiantes"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll_view_estudiantes"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bd_estudiantes">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_estudiantes"
+                android:layout_width="match_parent"
+                android:layout_height="468dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:padding="0dp"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

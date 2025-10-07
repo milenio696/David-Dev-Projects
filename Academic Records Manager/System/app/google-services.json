@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "756814934269",
+    "project_id": "programacion-v-3d308",
+    "storage_bucket": "programacion-v-3d308.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756814934269:android:c7bf79d1ada2ae31454e94",
+        "android_client_info": {
+          "package_name": "com.ulatina.proyectoprogramacionv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756814934269-paa329f3ea1rgjc899rihq94fd0rjjt0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ulatina.proyectoprogramacionv",
+            "certificate_hash": "49e7243f337b812c18d95e0323971415c3696948"
+          }
+        },
+        {
+          "client_id": "756814934269-s7ed2r84hmgebl7pok18ub8oi78oerpj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8y7n29HEwB049qqmZxumWVwpJ3v_OonE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756814934269-s7ed2r84hmgebl7pok18ub8oi78oerpj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

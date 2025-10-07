@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2a3132"
+    tools:context=".CreateAccountActivity">
+
+    <ImageView
+        android:id="@+id/img_sign_up"
+        android:layout_width="253dp"
+        android:layout_height="243dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="79dp"
+        android:src="@drawable/login_user_icon_white_head_vrokey7_600_photoroom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_atras_sign_up" />
+
+    <EditText
+        android:id="@+id/edtxt_new_password"
+        android:layout_width="259dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="76dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#E2D8D4"
+        android:textColorHint="#E2D8D4"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_new_email" />
+
+    <Button
+        android:id="@+id/btn_crear_cuenta"
+        android:layout_width="145dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="133dp"
+        android:backgroundTint="#2EA66A"
+        android:text="@string/crear_cuenta"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_confirm_password" />
+
+    <EditText
+        android:id="@+id/edtxt_confirm_password"
+        android:layout_width="259dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="76dp"
+        android:ems="10"
+        android:hint="@string/confirmar_contrase_a"
+        android:inputType="textPassword"
+        android:textColor="#E2D8D4"
+        android:textColorHint="#E2D8D4"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_new_password" />
+
+    <EditText
+        android:id="@+id/edtxt_new_email"
+        android:layout_width="258dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="77dp"
+        android:ems="10"
+        android:hint="@string/correo_electronico"
+        android:inputType="textEmailAddress"
+        android:textColor="#E2D8D4"
+        android:textColorHint="#E2D8D4"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtxt_new_username" />
+
+    <EditText
+        android:id="@+id/edtxt_new_username"
+        android:layout_width="258dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="77dp"
+        android:ems="10"
+        android:hint="Nombre de Usuario"
+        android:inputType="text"
+        android:textColor="#E2D8D4"
+        android:textColorHint="#E2D8D4"
+        android:textIsSelectable="false"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_sign_up" />
+
+    <Button
+        android:id="@+id/btn_atras_sign_up"
+        android:layout_width="91dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="304dp"
+        android:backgroundTint="#852E20"
+        android:text="@string/atras"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="edtxt_confirm_password,edtxt_new_email,edtxt_new_username" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
