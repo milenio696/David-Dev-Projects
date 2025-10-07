@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BattleFightGrupo1.Models.Torneo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Torneos</h1>
+
+<p>
+    <a asp-action="Create">Crear Torneo Nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoTorneo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaTorneo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PremioMonetario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ganador)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <span style="font-weight: bold;">
+                        @Html.DisplayFor(modelItem => item.CodigoTorneo)
+                    </span>
+                </td>
+                <td>
+                    @item.FechaTorneo.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PremioMonetario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ganador)
+                </td>
+                <td class="text-right">
+                    @if (!string.IsNullOrEmpty(item.Ganador))
+                    {
+                        <span style="color:forestgreen; font-weight:bold;">Torneo Realizado</span>
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Competir", "Edit", new { id = item.Id }, new { style = "color:blue;" })
+                    }
+                    |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { style = "color:red;" })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,77 @@
+﻿ @model BattleFightGrupo1.Models.Torneo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="d-flex justify-content-center align-items-center">Eliminar Torneo</h1>
+
+<div class="d-flex justify-content-center align-items-center">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CodigoTorneo" class="control-label"></label>
+                <input asp-for="CodigoTorneo" class="form-control" readonly />
+                <span asp-validation-for="CodigoTorneo" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="PremioMonetario" class="control-label"></label>
+                <input asp-for="PremioMonetario" class="form-control" readonly />
+                <span asp-validation-for="PremioMonetario" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Categoria" class="control-label"></label>
+                <input asp-for="Categoria" class="form-control" readonly />
+                <span asp-validation-for="Categoria" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="FechaTorneo" class="control-label"></label>
+                <input asp-for="FechaTorneo" type="date" class="form-control" id="FechaTorneo" readonly />
+                <span asp-validation-for="FechaTorneo" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <label class="control-label">Ganador</label>
+                <div>
+                    @if (!string.IsNullOrEmpty(Model.Ganador))
+                    {
+                        <div style="color:green; font-weight:bold;">
+                            El ganador del torneo es: @Model.Ganador
+                        </div>
+                        <br />
+                        <label class="control-label" style="font-weight:bold; font-size:11;">Equipos Participantes</label>
+                        <div>
+                            @if (ViewBag.Equipos != null)
+                            {
+                                foreach (var equipo in (List<BattleFightGrupo1.Models.Equipo>)ViewBag.Equipos)
+                                {
+                                    <div>@equipo.NombreEquipo</div>
+                                }
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <div style="color:red;">
+                            No se ha realizado el torneo aún.
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <br />
+            <br />
+            <div class="form-group d-flex justify-content-between align-items-center">
+                <div>
+                    <a asp-action="Index" class="btn btn-bold">Cancelar</a> |
+                    <button type="submit" class="btn btn-bold">Eliminar Torneo</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

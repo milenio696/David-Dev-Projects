@@ -1,0 +1,96 @@
+﻿ @model BattleFightGrupo1.Models.Usuario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="d-flex justify-content-center align-items-center">Eliminar Usuario</h1>
+
+<div class="d-flex justify-content-center align-items-center">
+    <div class="col-md-4">
+        <form asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" readonly />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Cedula" class="control-label"></label>
+                <input asp-for="Cedula" class="form-control" readonly />
+                <span asp-validation-for="Cedula" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <br>
+                <input type="radio" id="Genero1" name="Genero" value="Masculino"
+                @if (Model.Genero == "Masculino")
+                {
+                    <text>checked</text>
+                } disabled  />
+                <label for="Genero1">Masculino</label>
+                <br>
+                <input type="radio" id="Genero2" name="Genero" value="Femenino"
+                @if (Model.Genero == "Femenino")
+                {
+                    <text>checked</text>
+                } disabled  />
+                <label for="Genero2">Femenino</label>
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="FechaRegistro" class="control-label"></label>
+                <input asp-for="FechaRegistro" type="date" class="form-control" readonly />
+                <span asp-validation-for="FechaRegistro" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Estado" class="control-label"></label>
+                <br>
+                <input type="radio" id="Estado1" name="Estado" value="Activo"
+                @if (Model.Estado == "Activo")
+                {
+                    <text>checked</text>
+                } disabled  />
+                <label for="Estado1">Activo</label>
+                <br>
+                <input type="radio" id="Estado2" name="Estado" value="Inactivo"
+                @if (Model.Estado == "Inactivo")
+                {
+                    <text>checked</text>
+                } disabled  />
+                <label for="Estado2">Inactivo</label>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="UsuarioLogin" class="control-label"></label>
+                <input asp-for="UsuarioLogin" class="form-control" readonly />
+                <span asp-validation-for="UsuarioLogin" class="text-danger"></span>
+            </div>
+            <br />
+            <br />
+
+            @if (ViewBag.DisableDeleteButton != null && (bool)ViewBag.DisableDeleteButton)
+            {
+                <h2 class="d-flex justify-content-center align-items-center">No puede eliminar su propio usuario</h2>
+            }
+            else
+            {
+                <h2 class="d-flex justify-content-center align-items-center">Desea eliminar el usuario completamente?</h2>
+            }
+
+            <div class="form-group d-flex justify-content-between align-items-center">
+                <div>
+                    <a asp-action="Index" class="btn btn-bold">Cancelar</a> |
+                    <button type="submit" class="btn btn-bold" @if (ViewBag.DisableDeleteButton != null && (bool)ViewBag.DisableDeleteButton)
+                    {
+                        <text>disabled</text>
+                    } >Eliminar Usuario</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

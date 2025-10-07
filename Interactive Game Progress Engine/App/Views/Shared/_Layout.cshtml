@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BattleFightGrupo1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+</head>
+<body>
+    <div id="container">
+        <div class="image"></div>
+        <div class="leftcontent">
+            @if (!string.IsNullOrEmpty(ViewBag.NombreUsuario))
+            {
+                <div class="menu">
+                    <div class="left-links">
+                        <a asp-area="" asp-controller="Equipo" asp-action="Index" style="color: white;">Equipos</a>
+                        <a asp-area="" asp-controller="Torneo" asp-action="Index" style="color: white;">Torneos</a>
+                        <a asp-area="" asp-controller="Usuario" asp-action="Index" style="color: white;">Usuarios</a>
+                        <a asp-area="" asp-controller="AcercaDe" asp-action="Index" style="color: white;">Acerca de</a>
+                    </div>
+
+                    <div class="right-links">
+                        @if (!string.IsNullOrEmpty(ViewBag.NombreUsuario))
+                        {
+                            <span style="color: #E5DDAA; margin-right: 15px;">@ViewBag.NombreUsuario</span>
+                        }
+                        <a asp-area="" asp-controller="Usuario" asp-action="Logout" style="color: white;">Salir&nbsp;</a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <script>
+                    // Hide the menu if the user is not logged in
+                    var menu = document.querySelector('.menu');
+                    if (menu) menu.style.display = 'none';
+                </script>
+            }
+            <br>
+
+            @RenderBody()
+
+            <br />
+            <div id="footer" class="footer">
+                <span>Derechos de Autor © 2024 | Programación 4.</span>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

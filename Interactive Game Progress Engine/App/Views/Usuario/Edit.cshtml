@@ -1,0 +1,120 @@
+﻿@model BattleFightGrupo1.Models.Usuario
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="d-flex justify-content-center align-items-center"> Actualizar Usuario</h1>
+
+<hr />
+<div class="d-flex justify-content-center align-items-center">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" required />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Cedula" class="control-label"></label>
+                <input asp-for="Cedula" class="form-control" readonly />
+                <span asp-validation-for="Cedula" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <br>
+                <input type="radio" id="Genero1" name="Genero" value="Masculino"
+                @if (Model.Genero == "Masculino")
+                {
+                    <text>checked</text>
+                } required />
+                <label for="Genero1">Masculino</label>
+                <br>
+                <input type="radio" id="Genero2" name="Genero" value="Femenino"
+                @if (Model.Genero == "Femenino")
+                {
+                    <text>checked</text>
+                } required />
+                <label for="Genero2">Femenino</label>
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="FechaRegistro" class="control-label"></label>
+                <input asp-for="FechaRegistro" type="date" class="form-control" disabled />
+                <span asp-validation-for="FechaRegistro" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Estado" class="control-label"></label>
+                <br>
+                <input type="radio" id="Estado1" name="Estado" value="Activo"
+                @if (Model.Estado == "Activo")
+                {
+                    <text>checked</text>
+                } required />
+                <label for="Estado1">Activo</label>
+                <br>
+                <input type="radio" id="Estado2" name="Estado" value="Inactivo"
+                @if (Model.Estado == "Inactivo")
+                {
+                    <text>checked</text>
+                } required />
+                <label for="Estado2">Inactivo</label>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="UsuarioLogin" class="control-label"></label>
+                <input asp-for="UsuarioLogin" class="form-control" required />
+                <span asp-validation-for="UsuarioLogin" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Contrasena" class="control-label"></label>
+                <div class="input-group">
+                    <input asp-for="Contrasena" type="password" class="form-control" required />
+                    <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('Contrasena')">👁️</button>
+                </div>
+                <span asp-validation-for="Contrasena" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="ConfirmarContrasena" class="control-label">Confirmar Contraseña</label>
+                <div class="input-group">
+                    <input type="password" id="ConfirmarContrasena" name="ConfirmarContrasena" class="form-control" required />
+                    <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('ConfirmarContrasena')">👁️</button>
+                </div>
+                <span id="passwordMatchError" class="text-danger"></span>
+            </div>
+            <br />
+            <br />
+            <div class="form-group d-flex justify-content-between align-items-center">
+                <div>
+                    <a asp-action="Index" class="btn btn-bold">Cancelar</a> | <button type="submit" class="btn btn-bold">Actualizar Usuario</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<script>
+    function togglePassword(fieldId) {
+        const field = document.getElementById(fieldId);
+        field.type = field.type === 'password' ? 'text' : 'password';
+    }
+    document.querySelector('form').addEventListener('submit', function (e) {
+        const password = document.getElementById('Contrasena').value;
+        const confirmPassword = document.getElementById('ConfirmarContrasena').value;
+        const errorSpan = document.getElementById('passwordMatchError');
+
+        if (password !== confirmPassword) {
+            e.preventDefault();
+            errorSpan.textContent = 'Las contraseñas no coinciden.';
+        } else {
+            errorSpan.textContent = '';
+        }
+    });
+</script>

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<BattleFightGrupo1.Models.Equipo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Equipos</h1>
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <p style="margin: 0;">
+        <a asp-action="Create">Crear Equipo</a>
+    </p>
+    <form method="post" action="/Equipo/Index" style="margin: 0;">
+        <label for="Categoria">Filtrar por Categoria:</label>
+        <select name="Categoria" asp-items="ViewBag.Categorias"></select>
+        <input type="submit" value="Filter" />
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreEquipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoEquipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Puntaje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jugador1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jugador2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jugador3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jugador4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <span style="font-weight: bold;">
+                        @Html.DisplayFor(modelItem => item.NombreEquipo)
+                    </span>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CodigoEquipo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Puntaje)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jugador1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jugador2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jugador3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jugador4)
+                </td>
+                <td>
+                    @item.FechaRegistro.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @Html.ActionLink("Actualizar", "Edit", new { id = item.Id }, new { style = "color:blue;" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

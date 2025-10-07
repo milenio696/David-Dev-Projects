@@ -1,0 +1,124 @@
+﻿@using System.Linq.Expressions
+@model BattleFightGrupo1.Models.Equipo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="d-flex justify-content-center align-items-center"> Creación de Equipo</h1>
+
+<hr />
+<div class="d-flex justify-content-center align-items-center">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreEquipo" class="control-label"></label>
+                <input asp-for="NombreEquipo" class="form-control" required />
+                <span asp-validation-for="NombreEquipo" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Puntaje" class="control-label"></label>
+                <input asp-for="Puntaje" class="form-control" type="number" min="1" max="100" required />
+                <span asp-validation-for="Puntaje" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Categoria" class="control-label"></label>
+                <select asp-for="Categoria" class="form-control" asp-items="ViewBag.Categorias">
+                    <option value="">Seleccione una opción</option>
+                </select>
+                <span asp-validation-for="Categoria" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Jugador1" class="control-label"></label>
+                <select asp-for="Jugador1" class="form-control" asp-items="ViewBag.Jugadores" id="Jugador1">
+                    <option value="">Seleccione un jugador</option>
+                </select>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Jugador2" class="control-label"></label>
+                <select asp-for="Jugador2" class="form-control" asp-items="ViewBag.Jugadores" id="Jugador2">
+                    <option value="">Seleccione un jugador</option>
+                </select>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Jugador3" class="control-label"></label>
+                <select asp-for="Jugador3" class="form-control" asp-items="ViewBag.Jugadores" id="Jugador3">
+                    <option value="">Seleccione un jugador</option>
+                </select>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Jugador4" class="control-label"></label>
+                <select asp-for="Jugador4" class="form-control" asp-items="ViewBag.Jugadores" id="Jugador4">
+                    <option value="">Seleccione un jugador</option>
+                </select>
+            </div>
+            <br />
+            <div class="form-group d-flex justify-content-between align-items-center">
+                <button type="reset" class="btn btn-outline-warning" style="display: inline-flex; align-items: center;"> <i class="fa fa-trash" aria-hidden="true" style="margin-right: 5px;"></i> </button>
+                <div class="form-group d-flex justify-content-between align-items-center">
+                    <div>
+                        <a asp-action="Index" class="btn btn-bold">Cancelar</a> | <button type="submit" class="btn btn-bold">Crear Equipo</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function updatePlayerSelection() {
+        var playerSelects = ['Jugador1', 'Jugador2', 'Jugador3', 'Jugador4'];
+        playerSelects.forEach(function(playerSelectId) {
+            var playerSelect = document.getElementById(playerSelectId);
+            for (var i = 0; i < playerSelect.options.length; i++) {
+                playerSelect.options[i].disabled = false;
+                playerSelect.options[i].classList.remove('disabled-option');
+            }
+        });
+        playerSelects.forEach(function (playerSelectId) {
+            var playerSelect = document.getElementById(playerSelectId);
+            var selectedPlayer = playerSelect.value;
+            playerSelects.forEach(function (otherPlayerSelectId) {
+                if (otherPlayerSelectId !== playerSelectId) {
+                    var otherPlayerSelect = document.getElementById(otherPlayerSelectId);
+                    for (var i = 0; i < otherPlayerSelect.options.length; i++) {
+                        if (otherPlayerSelect.options[i].value === selectedPlayer && selectedPlayer !== "") {
+                            otherPlayerSelect.options[i].disabled = true;
+                            otherPlayerSelect.options[i].classList.add('disabled-option');
+                        }
+                    }
+                }
+            });
+        });
+    }
+
+    function resetPlayerSelection() {
+        var playerSelects = ['Jugador1', 'Jugador2', 'Jugador3', 'Jugador4'];
+
+        playerSelects.forEach(function (playerSelectId) {
+            var playerSelect = document.getElementById(playerSelectId);
+            for (var i = 0; i < playerSelect.options.length; i++) {
+                playerSelect.options[i].disabled = false;
+                playerSelect.options[i].classList.remove('disabled-option');
+            }
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var playerSelects = ['Jugador1', 'Jugador2', 'Jugador3', 'Jugador4'];
+        playerSelects.forEach(function (playerSelectId) {
+            document.getElementById(playerSelectId).addEventListener('change', updatePlayerSelection);
+        });
+        var resetButton = document.querySelector('button[type="reset"]');
+        if (resetButton) {
+            resetButton.addEventListener('click', resetPlayerSelection);
+        }
+        updatePlayerSelection();
+    });
+</script>

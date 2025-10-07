@@ -1,0 +1,56 @@
+﻿@model BattleFightGrupo1.Models.Torneo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="d-flex justify-content-center align-items-center"> Creación de Torneo</h1>
+
+<hr />
+<div class="d-flex justify-content-center align-items-center">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CodigoTorneo" class="control-label"></label>
+                <input asp-for="CodigoTorneo" class="form-control" />
+                <span asp-validation-for="CodigoTorneo" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="PremioMonetario" class="control-label"></label>
+                <input asp-for="PremioMonetario" class="form-control" />
+                <span asp-validation-for="PremioMonetario" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Categoria" class="control-label"></label>
+                <select asp-for="Categoria" class="form-control" asp-items="ViewBag.Categorias">
+                    <option value="">Seleccione una opción</option>
+                </select>
+                <span asp-validation-for="Categoria" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="FechaTorneo" class="control-label"></label>
+                <input asp-for="FechaTorneo" type="date" class="form-control" id="FechaTorneo" readonly />
+                <span asp-validation-for="FechaTorneo" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group d-flex justify-content-between align-items-center">
+                <button type="reset" class="btn btn-outline-warning" style="display: inline-flex; align-items: center;"> <i class="fa fa-trash" aria-hidden="true" style="margin-right: 5px;"></i> </button>
+                <div class="form-group d-flex justify-content-between align-items-center">
+                    <div>
+                        <a asp-action="Index" class="btn btn-bold">Cancelar</a> | <button type="submit" class="btn btn-bold">Crear Equipo</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var today = new Date().toISOString().split('T')[0];
+        document.getElementById('FechaTorneo').value = today;
+    });
+</script>

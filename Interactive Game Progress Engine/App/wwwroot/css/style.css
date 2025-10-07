@@ -1,0 +1,217 @@
+body {
+    background: #544e48;
+    background-repeat: no-repeat;
+    background-position: 0% 25%;
+    background-attachment: fixed;
+    width: 90%;
+    height: 100vh;
+    color: #717272;
+    font-size: 11px;
+    font-family: Verdana, sans-serif;
+    padding: 10px;
+    margin: auto;
+}
+
+A:link {
+    COLOR: #717272;
+    TEXT-DECORATION: none;
+    font-weight: bold;
+}
+
+A:visited {
+    COLOR: #717272;
+    TEXT-DECORATION: none;
+}
+
+A:active {
+    COLOR: white;
+    TEXT-DECORATION: none;
+}
+
+A:hover {
+    COLOR: #DD861F;
+    TEXT-DECORATION: none;
+}
+
+A.footerl:link {
+    COLOR: #000;
+    TEXT-DECORATION: none;
+}
+
+A.footerl:visited {
+    COLOR: #000;
+    TEXT-DECORATION: none;
+}
+
+A.footerl:active {
+    COLOR: #000;
+    TEXT-DECORATION: none;
+}
+
+A.footerl:hover {
+    COLOR: #8F5933;
+    TEXT-DECORATION: underline;
+}
+
+.container {
+    background-color: #FFF;
+    border: 1px solid #AAAAAA;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    margin: auto;
+}
+
+.navigation {
+    letter-spacing: 1px;
+    word-spacing: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 95%;
+    float: left;
+    text-align: left;
+    background-color: #FFF;
+    padding: 38px 15px 13px 15px;
+}
+
+.logo {
+    border-bottom: 5px solid #FDED73;
+    text-align: right;
+    color: #F1A93B;
+    font-size: 24px;
+    padding: 15px;
+}
+
+    .logo em {
+        display: block;
+        text-align: right;
+        color: #CC0000;
+        font-weight: normal;
+        font-size: 10px;
+    }
+
+.image {
+    background: url('../images/dall_header.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 279px;
+}
+
+.boxcontain {
+    background-color: #A2A2A3;
+    width: 46%;
+    float: right;
+    height: 147px;
+}
+
+.bluebox {
+    height: 100px;
+    border-bottom: 2px dotted #FFF;
+    border-right: 2px dotted #FFF;
+    background: #669CC0 url('../images/dots.gif');
+    background-repeat: no-repeat;
+    background-position: 99% 97%;
+    float: left;
+    width: 80%;
+}
+
+.rightgrey {
+    background: #A2A2A3;
+    height: 147px;
+    float: left;
+}
+
+.content {
+    padding: 5px;
+}
+
+.leftcontent {
+    background-color: #fff;
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+h3 {
+    color: #F1A93B;
+    padding: 0;
+    margin: 0 0 5px 0;
+    text-decoration: underline;
+    width: 50%;
+}
+
+#images {
+    background-image: url('../images/fight.jpg');
+    border: 1px dashed black;
+    width: 150px;
+    height: 150px;
+    float: right;
+    margin: 0 5px 5px 0;
+}
+
+.footer {
+    font-size: 11px;
+    padding: 0 3px 3px 3px;
+    text-align: right;
+}
+
+.bottomnav {
+    font-size: 10px;
+    text-align: left;
+    padding: 0 3px 3px 3px;
+}
+
+.loginContainer {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* nuevos after template */
+.menu {
+    display: flex; /* asigna flex */
+    justify-content: space-between; /* alinea los items centrados */
+    width: 100%;
+    background: #544E48;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+.left-links {
+    display: flex; /* asigna flex */
+    align-items: center; /* alinea los items centro verticalmente*/
+    gap: 20px; /* agrega un espacio de 20 pixeles entre los titulos*/
+}
+
+.right-links {
+    display: flex; /* asigna flex*/
+    align-items: center; /* alinea los items en el centro verticalmente*/
+}
+
+#menu a:last-child {
+    margin-left: auto; /* alinea "Salir" a la derecha*/
+}
+
+.btn-bold {
+    COLOR: #717272;
+    TEXT-DECORATION: none;
+    font-weight: bold;
+}
+
+.disabled-option {
+    color: red !important; /* Make the text color red for disabled options */
+    font-weight: bold; /* Optional: make the disabled options bold */
+}
+
+option:disabled {
+    color: red; /* This will also color disabled options red */
+}
+
+.text-right {
+    text-align: right;
+}

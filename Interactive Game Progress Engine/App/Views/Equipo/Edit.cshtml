@@ -1,0 +1,123 @@
+﻿@model BattleFightGrupo1.Models.Equipo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="d-flex justify-content-center align-items-center"> Actualizar Equipo</h1>
+
+<hr />
+<div class="d-flex justify-content-center align-items-center">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NombreEquipo" class="control-label"></label>
+                <input asp-for="NombreEquipo" class="form-control" />
+                <span asp-validation-for="NombreEquipo" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="CodigoEquipo" class="control-label"></label>
+                <input asp-for="CodigoEquipo" class="form-control" readonly />
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Puntaje" class="control-label"></label>
+                <input asp-for="Puntaje" class="form-control" />
+                <span asp-validation-for="Puntaje" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Categoria" class="control-label"></label>
+                <select name="Categoria" id="Categoria" class="form-control">
+                    <option value="">Seleccione una opción</option>
+                    @{
+                        string selectedOption = Model.Categoria;
+                    }
+                    <!option value="Beginner" @(Model.Categoria == "Beginner" ? "Selected" : "") >Beginner</!option>
+                    <!option value="Middle" @(Model.Categoria == "Middle" ? "Selected" : "")>Middle</!option>
+                    <!option value="Expert" @(Model.Categoria == "Expert" ? "Selected" : "")>Expert</!option>
+                </select>
+                <span asp-validation-for="Categoria" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Jugador1" class="control-label"></label>
+                <select asp-for="Jugador1" class="form-control" asp-items="ViewBag.Jugadores" id="Jugador1">
+                    <option value="">Seleccione un jugador</option>
+                </select>
+                <span asp-validation-for="Jugador1" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Jugador2" class="control-label"></label>
+                <select asp-for="Jugador2" class="form-control" asp-items="ViewBag.Jugadores" id="Jugador2">
+                    <option value="">Seleccione un jugador</option>
+                </select>
+                <span asp-validation-for="Jugador2" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Jugador3" class="control-label"></label>
+                <select asp-for="Jugador3" class="form-control" asp-items="ViewBag.Jugadores" id="Jugador3">
+                    <option value="">Seleccione un jugador</option>
+                </select>
+                <span asp-validation-for="Jugador3" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Jugador4" class="control-label"></label>
+                <select asp-for="Jugador4" class="form-control" asp-items="ViewBag.Jugadores" id="Jugador4">
+                    <option value="">Seleccione un jugador</option>
+                </select>
+                <span asp-validation-for="Jugador4" class="text-danger"></span>
+            </div>
+            <br />
+            <br />
+            <div class="form-group d-flex justify-content-between align-items-center">
+                <div>
+                    <a asp-action="Index" class="btn btn-bold">Cancelar</a> | <button type="submit" class="btn btn-bold">Actualizar Equipo</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<script>
+    function updatePlayerSelection() {
+        var playerSelects = ['Jugador1', 'Jugador2', 'Jugador3', 'Jugador4'];
+        playerSelects.forEach(function(playerSelectId) {
+            var playerSelect = document.getElementById(playerSelectId);
+            for (var i = 0; i < playerSelect.options.length; i++) {
+                playerSelect.options[i].disabled = false;
+                playerSelect.options[i].classList.remove('disabled-option');
+            }
+        });
+
+        playerSelects.forEach(function (playerSelectId) {
+            var playerSelect = document.getElementById(playerSelectId);
+            var selectedPlayer = playerSelect.value;
+
+            playerSelects.forEach(function (otherPlayerSelectId) {
+                if (otherPlayerSelectId !== playerSelectId) {
+                    var otherPlayerSelect = document.getElementById(otherPlayerSelectId);
+                    for (var i = 0; i < otherPlayerSelect.options.length; i++) {
+                        if (otherPlayerSelect.options[i].value === selectedPlayer && selectedPlayer !== "") {
+                            otherPlayerSelect.options[i].disabled = true;
+                            otherPlayerSelect.options[i].classList.add('disabled-option');
+                        }
+                    }
+                }
+            });
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var playerSelects = ['Jugador1', 'Jugador2', 'Jugador3', 'Jugador4'];
+        playerSelects.forEach(function (playerSelectId) {
+            document.getElementById(playerSelectId).addEventListener('change', updatePlayerSelection);
+        });
+        updatePlayerSelection();
+    });
+</script>

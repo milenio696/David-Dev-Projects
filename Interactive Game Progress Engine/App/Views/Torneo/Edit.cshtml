@@ -1,0 +1,112 @@
+﻿@model BattleFightGrupo1.Models.Torneo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="d-flex justify-content-center align-items-center"> Competir</h1>
+
+<hr />
+<div class="d-flex justify-content-center align-items-center">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CodigoTorneo" class="control-label"></label>
+                <input asp-for="CodigoTorneo" class="form-control" />
+                <span asp-validation-for="CodigoTorneo" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="PremioMonetario" class="control-label"></label>
+                <input asp-for="PremioMonetario" class="form-control" />
+                <span asp-validation-for="PremioMonetario" class="text-danger"></span>
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+                <label asp-for="Categoria" class="control-label"></label>
+                <input asp-for="Categoria" class="form-control" readonly />
+                <span asp-validation-for="Categoria" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="FechaTorneo" class="control-label"></label>
+                <input asp-for="FechaTorneo" type="date" class="form-control" id="FechaTorneo" readonly />
+                <span asp-validation-for="FechaTorneo" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="control-label" style="font-size:12px; font-weight:bold">Equipos Participantes</label>
+                <br />
+                <div>
+                    <br />
+                    <label for="Equipo1">Equipo 1</label>
+                    <select class="form-control" name="selectedEquipo1" id="Equipo1" required>
+                        <option value="">Seleccione una opción</option>
+                        @foreach (var equipo in ViewBag.Equipos)
+                        {
+                            <option value="@equipo.Value">@equipo.Text</option>
+                        }
+                    </select>
+                </div>
+                <div>
+                    <br />
+                    <label for="Equipo2">Equipo 2</label>
+                    <select class="form-control" name="selectedEquipo2" id="Equipo2" required>
+                        <option value="">Seleccione una opción</option>
+                        @foreach (var equipo in ViewBag.Equipos)
+                        {
+                            <option value="@equipo.Value">@equipo.Text</option>
+                        }
+                    </select>
+                </div>
+                @if (ViewData["EquiposError"] != null)
+                {
+                    <div class="text-danger">@ViewData["EquiposError"]</div>
+                }
+            </div>
+            <br />
+            <br />
+            <div class="form-group d-flex justify-content-between align-items-center">
+                <div>
+                    <a asp-action="Index" class="btn btn-bold">Cancelar</a> | <button type="submit" class="btn btn-bold">Competir</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    function updateTeamSelection() {
+        var teamSelects = ['Equipo1', 'Equipo2'];
+        teamSelects.forEach(function(teamSelectId) {
+            var teamSelect = document.getElementById(teamSelectId);
+            for (var i = 0; i < teamSelect.options.length; i++) {
+                teamSelect.options[i].disabled = false;
+                teamSelect.options[i].classList.remove('disabled-option');
+            }
+        });
+        teamSelects.forEach(function (teamSelectId) {
+            var teamSelect = document.getElementById(teamSelectId);
+            var selectedTeam = teamSelect.value;
+            teamSelects.forEach(function (otherTeamSelectId) {
+                if (otherTeamSelectId !== teamSelectId) {
+                    var otherTeamSelect = document.getElementById(otherTeamSelectId);
+                    for (var i = 0; i < otherTeamSelect.options.length; i++) {
+                        if (otherTeamSelect.options[i].value === selectedTeam && selectedTeam !== "") {
+                            otherTeamSelect.options[i].disabled = true;
+                            otherTeamSelect.options[i].classList.add('disabled-option');
+                        }
+                    }
+                }
+            });
+        });
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+        var teamSelects = ['Equipo1', 'Equipo2'];
+        teamSelects.forEach(function (teamSelectId) {
+            document.getElementById(teamSelectId).addEventListener('change', updateTeamSelection);
+        });
+        updateTeamSelection();
+    });
+</script>
