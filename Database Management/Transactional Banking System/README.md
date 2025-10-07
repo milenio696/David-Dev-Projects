@@ -19,4 +19,5 @@ This project demonstrates a SQL database system designed to manage client transa
 
 ---
 
-## Note © 2025 David Abarca. For portfolio purposes only. Viewing is allowed; reproduction or modification is not permitted.
+## Note 
+© 2025 David Abarca. For portfolio purposes only. Viewing is allowed; reproduction or modification is not permitted.
