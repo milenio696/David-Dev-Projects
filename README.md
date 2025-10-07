@@ -11,25 +11,21 @@ Each project has its own folder with a detailed README.
 **Language:** Java  
 **Description:** Calculates annual expenses and monthly profits with clear summaries.  
 **Technologies:** Java (JDK 8+)  
-**[More details](ExpenseTrackingSystem/README.md)**
 
 ### 2. Integrated Payroll System
 **Language:** Python + Flask  
 **Description:** Web-based payroll system with salary calculation, PDF generation, and email automation.  
 **Technologies:** Python, Flask, SQLAlchemy, Flask-Mail, ReportLab  
-**[More details](IntegratedPayrollSystem/README.md)**
 
 ### 3. Interactive Game Progress Engine
 **Language:** C#, HTML, CSS  
 **Description:** Interactive web application for team competitions with scoring and progress tracking.  
 **Technologies:** C#, HTML, CSS, ASP.NET  
-**[More details](InteractiveGameProgressEngine/README.md)**
 
 ### 4. Academic Records Manager
 **Language:** Kotlin (Android)  
 **Description:** Android app for managing student records, courses, grades, and secure payments.  
 **Technologies:** Kotlin, Android Studio, Firebase, Google Authentication API  
-**[More details](AcademicRecordsManager/README.md)**
 
 ---
 
