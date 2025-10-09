@@ -37,6 +37,12 @@ Each project has its own folder with a detailed README.
 **Technologies:** SQL Server, T-SQL, Stored Procedures, Triggers, Views, Functions, Security Roles  
 **[See more](./Database%20Management/README.md)**  
 
+### Python+AI - Microsoft
+**Language:** Python  
+**Description:** Folder containing Python examples demonstrating AI integration with GitHub, Azure and other providers. Projects explore conversation memory, guided learning with hints, and safe content handling.  
+**Technologies:** Python, OpenAI API, Azure OpenAI, GitHub AI, Ollama  
+**[Explore folder](./)**
+
 ---
 
 ## Note
