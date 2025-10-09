@@ -2,7 +2,7 @@
 
 # **Description**
 
-This information serves as a **record of participation in the official Microsoft Python+AI course**. This is a folder with Python examples using GitHub, OpenAI, Azure OpenAI, and other providers. Projects demonstrate interacting with language models, maintaining context, guiding learning, and filtering content for safety.
+This folder serves as a **record of participation in the official Microsoft Python+AI course**. These are Python examples using GitHub, OpenAI, Azure OpenAI, and other providers. Projects demonstrate interacting with language models, maintaining context, guiding learning, and filtering content for safety.
 
 Includes three main projects:  
 
