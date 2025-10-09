@@ -41,7 +41,7 @@ Each project has its own folder with a detailed README.
 **Language:** Python  
 **Description:** Folder containing Python examples demonstrating AI integration with GitHub, Azure and other providers. Projects explore conversation memory, guided learning with hints, and safe content handling.  
 **Technologies:** Python, OpenAI API, Azure OpenAI, GitHub AI, Ollama  
-**[See more](./Python+AI%2-%2Microsoft/README.md)**  
+**[See more](./Python+AI%20-%20Microsoft/README.md)**  
 
 ---
 
