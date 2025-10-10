@@ -6,9 +6,10 @@ This folder serves as a **record of participation in the official Microsoft Pyth
 
 Includes three main projects:  
 
-1. **Memory Chat**  
-2. **Hint-Based Tutor**  
-3. **Safe Moderation Chat**
+1. **Memory Chat Client**  
+2. **Guided Learning AI**  
+3. **Safe Memory Chat**
+4. **RAG Query Rewrite Chatbot**
 
 # **Projects**
 
@@ -33,6 +34,15 @@ Helps students by giving hints or clues instead of full answers. Ideal and based
 Assistant that blocks inappropriate questions or responses using local rules and provider moderation.  
 
 **Main file:** `safe_memory_chat.py`  
+
+---
+
+## **4. RAG Query Rewrite Chatbot**
+
+Demonstrates a Retrieval-Augmented Generation (RAG) approach combined with query rewriting to improve information retrieval accuracy from a given CSV file.
+The system rewrites user questions into optimized keyword queries, performs a local Lunr search on the dataset, and then uses a language model to generate responses based strictly on retrieved results.
+
+**Main file:** `rag_query_rewrite.py`
 
 ---
 
