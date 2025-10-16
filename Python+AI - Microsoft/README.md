@@ -10,6 +10,7 @@ Includes three main projects:
 2. **Guided Learning AI**  
 3. **Safe Memory Chat**
 4. **RAG Query Rewrite Chatbot**
+5. **PDF and Multimodal Image Analysis**
 
 # **Projects**
 
@@ -43,6 +44,15 @@ Demonstrates a Retrieval-Augmented Generation (RAG) approach combined with query
 The system rewrites user questions into optimized keyword queries, performs a local Lunr search on the dataset, and then uses a language model to generate responses based strictly on retrieved results.
 
 **Main file:** `rag_query_rewrite.py`
+
+---
+
+## **5. PDF and Multimodal Image Analysis**
+
+Includes scripts for processing PDFs and images with multimodal AI models:  
+
+- **`openai_pdf_analysis.py`** – Converts PDF pages to images and sends them to a multimodal AI model to extract text or answer questions about the content. Useful for automation, catalogs, manuals, or books.  
+- **`multimodal_image_ai_analysis.py`** – Sends images (local or remote) to a multimodal AI model for analysis, generating captions, insights, or answering specific questions. Supports Base64-embedded images for offline/local files.
 
 ---
 
