@@ -56,6 +56,20 @@ Includes scripts for processing PDFs and images with multimodal AI models:
 
 ---
 
+## 6. **Office Document Automation & Structured AI Tasks**
+
+- Automates reading and analyzing Office documents and other structured tasks. Supports structured output using Pydantic models and printing results in a readable format with Rich.
+- Reads Word (.docx), Excel (.xlsx), and PowerPoint (.pptx) files and converts their content to text.
+- Automates multiple tasks in sequence, such as:
+- Extracting event information
+- Checking delivery queries
+- Summarizing Office documents
+- Handles local documents and limits large text for AI processing.
+
+**Main file:** `intelligent_office_document_analysis_and_structured_output_pipeline.py`
+
+---
+
 # **Requirements**
 
 - Python 3.9+   
