@@ -70,6 +70,22 @@ Includes scripts for processing PDFs and images with multimodal AI models:
 
 ---
 
+## 7. Multi-Agent Content Review Workflow
+
+Automates content creation, review, and publication using multiple intelligent agents. The system evaluates content quality and decides the workflow path:
+
+- **Writer**: Generates clear, structured content based on user input.  
+- **Reviewer**: Assesses content by scoring clarity, completeness, accuracy, and structure.  
+- **Editor**: Improves content that doesn’t meet the minimum quality score (score < 80) based on Reviewer feedback.  
+- **Publisher**: Formats approved or edited content for publication.  
+- **Summarizer**: Produces a final report summarizing published content, workflow path, and key highlights.
+
+The workflow uses **conditional routing**: high-quality content is published directly, while content needing improvement is first edited before publication.  
+
+**Main file:** `agent_framework_workflow.py`  
+
+This project demonstrates how to combine **language models with conditional workflow logic** to create automated, scalable, and reliable content review and publishing systems.
+
 # **Requirements**
 
 - Python 3.9+   
